@@ -6,8 +6,8 @@ const { View, StyleSheet } = ReactNative;
 const StaticContainer = require('./StaticContainer');
 
 const SceneComponent = (Props) => {
-  const { shouldUpdated, ...props } = Props;
-  return <View {...props}>
+  const { shouldUpdated, width, ...props } = Props;
+  return <View {...props} style={{width, flex: 1}}>
       <StaticContainer shouldUpdate={shouldUpdated}>
         {props.children}
       </StaticContainer>
